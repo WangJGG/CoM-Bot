@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>下蹲训练</title>
+</head>
+<body>
+    <h1>运动训练视频</h1>
+    <video width="320" height="240" controls>
+        <source src="static\下蹲视频demo.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <br>
+    <button onclick="getFeedback()">获取训练反馈</button>
+
+    <script>
+        function getFeedback() {
+            alert('获取训练反馈');
+            // 这里可以跳转到反馈页面或执行其他操作
+             window.location.href = '/upload';
+        }
+    </script>
+</body>
+</html>

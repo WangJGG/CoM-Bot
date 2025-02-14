@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>运动选择</title>
+    <style>
+        /* 样式可以根据自己的需要进行调整 */
+        .exercise {
+            display: inline-block;
+            margin: 10px;
+            cursor: pointer;
+            text-align: center;
+        }
+        .exercise img {
+            width: 150px;
+            height: 150px;
+            #border-radius: 50%;
+            display: block; /* 让图片显示为块级元素，以便设置宽度和高度 */
+            margin: 0 auto; /* 水平居中图片 */
+        }
+    </style>
+</head>
+<body>
+    <h1>选择您的运动</h1>
+    <form action="/exercise" method="post">
+        <div class="exercise">
+            <label>
+                <input type="radio" name="exercise" value="下蹲">
+                <img src="{{ url_for('static', filename='squat.jpg') }}" alt="下蹲">
+                <p>下蹲</p>
+            </label>
+        </div>
+        <div class="exercise">
+            <label>
+                <input type="radio" name="exercise" value="举重">
+                <img src="{{ url_for('static', filename='weightlifting.jpg') }}" alt="举重">
+                <p>举重</p>
+            </label>
+        </div>
+        <div class="exercise">
+            <label>
+                <input type="radio" name="exercise" value="瑜伽">
+                <img src="{{ url_for('static', filename='yoga.jpg') }}" alt="瑜伽">
+                <p>瑜伽</p>
+            </label>
+        </div>
+        <input type="submit" value="确认">
+    </form>
+</body>
+</html>
